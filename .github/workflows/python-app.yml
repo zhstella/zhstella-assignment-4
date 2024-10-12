@@ -35,5 +35,4 @@ jobs:
       - name: Verify the server is running
         run: curl http://127.0.0.1:3000  # Check if the server is running correctly
 
-      - name: Clean up
-        run: pkill -f "make run"  # Optionally stop the server after checking
+    
