@@ -30,10 +30,10 @@ jobs:
       - name: Run the server
         run: |
           make run &  # Start the server in the background
-          sleep 10  # Wait 10 seconds to ensure the server has time to start
+          sleep 30  # Wait 10 seconds to ensure the server has time to start
 
       - name: Verify the server is running
-        run: curl http://localhost:3000  # Check if the server is running correctly
+        run: curl http://127.0.0.1:3000  # Check if the server is running correctly
 
       - name: Clean up
         run: pkill -f "make run"  # Optionally stop the server after checking
